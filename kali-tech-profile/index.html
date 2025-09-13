@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安全专家 | KALI Linux & 全栈开发者</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 代码背景容器 -->
+    <div class="code-bg-container">
+        <pre class="code-bg" id="code-bg"></pre>
+    </div>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <div class="kali-logo">
+                <span class="kali-icon"><i class="fas fa-terminal"></i></span>
+                <h1 class="kali-title">HACKER<span class="kali-green">X</span></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#about"><i class="fas fa-user"></i> 关于</a></li>
+                    <li><a href="#skills"><i class="fas fa-code"></i> 技能</a></li>
+                    <li><a href="#projects"><i class="fas fa-project-diagram"></i> 项目</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> 联系</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 英雄区域 -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to <span class="kali-green">My Digital Playground</span></h2>
+                <p class="hero-subtitle">精通 KALI Linux | Java | Python | C# | HTML</p>
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <div class="terminal-button close"></div>
+                            <div class="terminal-button minimize"></div>
+                            <div class="terminal-button maximize"></div>
+                        </div>
+                        <div class="terminal-title">Terminal</div>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-line"><span class="kali-green">user@kali</span>:<span class="kali-blue">~</span>$ whoami</p>
+                        <p class="terminal-line">security-expert</p>
+                        <p class="terminal-line"><span class="kali-green">user@kali</span>:<span class="kali-blue">~</span>$ ls -la skills/
+                        <p class="terminal-line">total 20</p>
+                        <p class="terminal-line">drwxr-xr-x  5 user user 4096 Sep 13 05:16 .</p>
+                        <p class="terminal-line">drwxr-xr-x 20 user user 4096 Sep 13 05:16 ..</p>
+                        <p class="terminal-line">drwxr-xr-x  2 user user 4096 Sep 13 05:16 kali-linux</p>
+                        <p class="terminal-line">drwxr-xr-x  2 user user 4096 Sep 13 05:16 java</p>
+                        <p class="terminal-line">drwxr-xr-x  2 user user 4096 Sep 13 05:16 python</p>
+                        <p class="terminal-line">drwxr-xr-x  2 user user 4096 Sep 13 05:16 csharp</p>
+                        <p class="terminal-line">drwxr-xr-x  2 user user 4096 Sep 13 05:16 html</p>
+                        <p class="terminal-line"><span class="kali-green">user@kali</span>:<span class="kali-blue">~</span>$ <span class="cursor">_</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于区域 -->
+        <section id="about" class="about">
+            <h2><span class="kali-green">01.</span> 关于我</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="avatar-container">
+                        <div class="avatar-border"></div>
+                        <img src="https://picsum.photos/seed/hacker/300/300" alt="安全专家" class="avatar">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>我是一名热衷于网络安全和全栈开发的技术专家，拥有多年的行业经验。我精通 KALI Linux 渗透测试工具，同时也是一名熟练的 Java、Python、C# 和 Web 开发者。</p>
+                    <p>我的专业领域包括网络安全评估、漏洞挖掘、软件开发和系统架构设计。我喜欢挑战复杂的技术问题，并始终保持学习最新的技术趋势。</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-hackerrank"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能区域 -->
+        <section id="skills" class="skills">
+            <h2><span class="kali-green">02.</span> 技术栈</h2>
+            <div class="skills-container">
+                <!-- KALI Linux 技能 -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>KALI Linux</h3>
+                    <p>精通渗透测试工具集，包括 Metasploit、Nmap、Burp Suite、Wireshark 等，擅长网络安全评估和漏洞挖掘。</p>
+                    <div class="skill-progress">
+                        <div class="skill-bar kali">
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Java 技能 -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java</h3>
+                    <p>精通 Java 核心技术，Spring 框架，微服务架构，拥有丰富的企业级应用开发经验。</p>
+                    <div class="skill-progress">
+                        <div class="skill-bar java">
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Python 技能 -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>擅长 Python 自动化脚本开发，数据分析，机器学习，以及使用 Flask/Django 构建 Web 应用。</p>
+                    <div class="skill-progress">
+                        <div class="skill-bar python">
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C# 技能 -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>C#</h3>
+                    <p>精通 .NET 框架，桌面应用开发，ASP.NET Web 应用，以及游戏开发。</p>
+                    <div class="skill-progress">
+                        <div class="skill-bar csharp">
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HTML/CSS/JS 技能 -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML/CSS/JS</h3>
+                    <p>精通现代 Web 前端技术，响应式设计，框架如 React、Vue，以及前端性能优化。</p>
+                    <div class="skill-progress">
+                        <div class="skill-bar web">
+                            <span class="skill-percentage">94%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目区域 -->
+        <section id="projects" class="projects">
+            <h2><span class="kali-green">03.</span> 代表项目</h2>
+            <div class="projects-container">
+                <!-- 项目卡片 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/seed/project1/600/400" alt="网络安全评估工具">
+                    </div>
+                    <div class="project-info">
+                        <h3>网络安全评估工具</h3>
+                        <p>基于 KALI Linux 和 Python 开发的自动化渗透测试框架，集成了多种安全评估工具。</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">KALI Linux</span>
+                            <span class="tech-badge">Networking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目卡片 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/seed/project2/600/400" alt="企业级 Java 应用">
+                    </div>
+                    <div class="project-info">
+                        <h3>企业级 Java 应用</h3>
+                        <p>基于 Spring Boot 构建的微服务架构应用，提供完整的业务解决方案和 RESTful API。</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">Spring Boot</span>
+                            <span class="tech-badge">Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目卡片 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/seed/project3/600/400" alt="Web 安全平台">
+                    </div>
+                    <div class="project-info">
+                        <h3>Web 安全平台</h3>
+                        <p>全栈开发的安全管理平台，包含漏洞扫描、安全监控和报告生成功能。</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML/CSS/JS</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系区域 -->
+        <section id="contact" class="contact">
+            <h2><span class="kali-green">04.</span> 联系我</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>如果您有任何问题或合作机会，欢迎随时联系我。</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@hackerexample.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+86 123 4567 8910</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>中国，北京</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" class="form-input" placeholder="您的姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" class="form-input" placeholder="您的邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言</label>
+                            <textarea id="message" class="form-textarea" placeholder="请输入您的留言"></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">发送</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="kali-icon"><i class="fas fa-terminal"></i></span>
+                    <h3 class="kali-title">HACKER<span class="kali-green">X</span></h3>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">关于</a>
+                    <a href="#skills">技能</a>
+                    <a href="#projects">项目</a>
+                    <a href="#contact">联系</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 HACKERX. 保留所有权利。</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

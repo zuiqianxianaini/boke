@@ -1,0 +1,722 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 颜色变量定义 - KALI Linux配色方案 */
+:root {
+    --kali-bg: #121212;
+    --kali-dark: #0d1117;
+    --kali-darker: #0a0a0a;
+    --kali-green: #44b78b;
+    --kali-green-dark: #3fa67a;
+    --kali-blue: #37352f;
+    --kali-gray: #303030;
+    --kali-gray-light: #404040;
+    --kali-text: #e6e6e6;
+    --kali-text-secondary: #a0a0a0;
+    --kali-border: #333333;
+}
+
+/* 基础样式 */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--kali-bg);
+    color: var(--kali-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* 代码背景容器 */
+.code-bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.05;
+    overflow: hidden;
+}
+
+.code-bg {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--kali-green);
+    font-size: 14px;
+    white-space: pre;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%; /* 双倍高度用于滚动效果 */
+    margin: 0;
+    padding: 0;
+    animation: code-scroll 30s linear infinite;
+}
+
+/* 代码滚动动画 */
+@keyframes code-scroll {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 主容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 头部样式 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    background-color: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--kali-border);
+}
+
+.kali-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kali-icon {
+    font-size: 24px;
+    color: var(--kali-green);
+}
+
+.kali-title {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.kali-title .kali-green {
+    color: var(--kali-green);
+}
+
+/* 导航样式 */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--kali-text);
+    font-size: 16px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav a:hover {
+    color: var(--kali-green);
+}
+
+/* 英雄区域 */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: var(--kali-text-secondary);
+    margin-bottom: 40px;
+}
+
+/* 终端样式 */
+.terminal-container {
+    background-color: var(--kali-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 0 auto;
+    animation: terminal-fade-in 1s ease-out;
+}
+
+@keyframes terminal-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.terminal-header {
+    background-color: var(--kali-gray);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--kali-border);
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-button.close {
+    background-color: #ff5f56;
+}
+
+.terminal-button.minimize {
+    background-color: #ffbd2e;
+}
+
+.terminal-button.maximize {
+    background-color: #27c93f;
+}
+
+.terminal-title {
+    font-size: 14px;
+    color: var(--kali-text-secondary);
+}
+
+.terminal-body {
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.terminal-line {
+    margin-bottom: 8px;
+    animation: terminal-type 0.05s step-end;
+}
+
+@keyframes terminal-type {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.terminal-line .kali-green {
+    color: var(--kali-green);
+}
+
+.terminal-line .kali-blue {
+    color: #839496;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: var(--kali-green);
+    animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* 通用区域样式 */
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+
+section h2 .kali-green {
+    color: var(--kali-green);
+}
+
+/* 关于区域 */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-image {
+    flex: 0 0 300px;
+}
+
+.avatar-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.avatar-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--kali-green);
+    border-radius: 50%;
+    animation: avatar-rotate 20s linear infinite;
+}
+
+@keyframes avatar-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--kali-bg);
+    position: relative;
+    z-index: 1;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--kali-gray);
+    color: var(--kali-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--kali-green);
+    transform: translateY(-3px);
+}
+
+/* 技能区域 */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: var(--kali-dark);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 3px solid var(--kali-green);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.skill-icon {
+    font-size: 48px;
+    color: var(--kali-green);
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: var(--kali-text-secondary);
+    margin-bottom: 20px;
+}
+
+.skill-progress {
+    width: 100%;
+    height: 8px;
+    background-color: var(--kali-gray);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-bar {
+    height: 100%;
+    border-radius: 4px;
+    position: relative;
+    animation: skill-progress 1.5s ease-out;
+}
+
+@keyframes skill-progress {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--width, 100%);
+    }
+}
+
+.skill-bar.kali {
+    background-color: var(--kali-green);
+    --width: 95%;
+}
+
+.skill-bar.java {
+    background-color: #ED8B00;
+    --width: 90%;
+}
+
+.skill-bar.python {
+    background-color: #3776AB;
+    --width: 92%;
+}
+
+.skill-bar.csharp {
+    background-color: #239120;
+    --width: 88%;
+}
+
+.skill-bar.web {
+    background-color: #E34F26;
+    --width: 94%;
+}
+
+.skill-percentage {
+    position: absolute;
+    right: 10px;
+    top: -25px;
+    font-size: 14px;
+    color: var(--kali-text);
+}
+
+/* 项目区域 */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background-color: var(--kali-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: var(--kali-text-secondary);
+    margin-bottom: 15px;
+}
+
+.project-tech {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tech-badge {
+    background-color: var(--kali-gray);
+    color: var(--kali-text);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 联系区域 */
+.contact-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item i {
+    font-size: 20px;
+    color: var(--kali-green);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--kali-text-secondary);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--kali-gray);
+    border: 1px solid var(--kali-border);
+    border-radius: 4px;
+    color: var(--kali-text);
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--kali-green);
+}
+
+.form-textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-submit {
+    background-color: var(--kali-green);
+    color: var(--kali-dark);
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: var(--kali-green-dark);
+    transform: translateY(-2px);
+}
+
+/* 页脚样式 */
+.footer {
+    background-color: var(--kali-darker);
+    padding: 50px 0;
+    border-top: 1px solid var(--kali-border);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--kali-text-secondary);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--kali-green);
+}
+
+.footer-copyright {
+    color: var(--kali-text-secondary);
+    font-size: 14px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav ul {
+        gap: 15px;
+    }
+    
+    .hero h2 {
+        font-size: 36px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .terminal-container {
+        max-width: 100%;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    section h2 {
+        font-size: 28px;
+    }
+    
+    .about-content {
+        gap: 30px;
+    }
+    
+    .contact-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 28px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .avatar-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .about-text p {
+        font-size: 16px;
+    }
+    
+    .skill-card {
+        padding: 20px;
+    }
+}
